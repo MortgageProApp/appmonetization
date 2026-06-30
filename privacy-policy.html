@@ -90,31 +90,10 @@
     }
 
     .page-nav a:hover,
-    .page-nav a:focus,
-    .page-nav button:hover,
-    .page-nav button:focus {
+    .page-nav a:focus {
       background: var(--sage);
       color: #17200f;
       outline: none;
-    }
-
-    .page-nav button {
-      background: transparent;
-      border: 1px solid rgba(151, 193, 92, 0.35);
-      border-radius: 999px;
-      color: var(--sage-light);
-      cursor: pointer;
-      font: inherit;
-      font-size: 0.86rem;
-      font-weight: 700;
-      padding: 7px 14px;
-    }
-
-    .copy-status {
-      align-self: center;
-      color: #fff;
-      font-size: 0.8rem;
-      min-width: 54px;
     }
 
     .container {
@@ -315,26 +294,6 @@
       margin: 52px 0;
     }
 
-    .source-view {
-      background: #101010;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      color: var(--sage-light);
-      font-family: "SF Mono", "Fira Code", "Courier New", monospace;
-      font-size: 0.78rem;
-      line-height: 1.55;
-      margin: 0 auto 48px;
-      max-height: 75vh;
-      max-width: 1100px;
-      overflow: auto;
-      padding: 20px;
-      white-space: pre;
-    }
-
-    .source-view[hidden] {
-      display: none;
-    }
-
     footer {
       border-top: 1px solid var(--border);
       color: var(--muted);
@@ -388,9 +347,6 @@
   <nav class="page-nav" aria-label="Page sections">
     <a href="#user-manual">User Manual</a>
     <a href="#privacy-policy">Privacy Policy</a>
-    <button id="source-toggle" type="button" aria-expanded="false" aria-controls="html-source">View HTML Code</button>
-    <button id="copy-source" type="button">Copy HTML Code</button>
-    <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
   </nav>
 
   <main class="container">
@@ -689,61 +645,8 @@ the normal schedule; accelerated payoff begins in month 49.</pre>
     </section>
   </main>
 
-  <pre class="source-view" id="html-source" hidden></pre>
-
   <footer>
     © 2026 XMR Enterprises Inc. All rights reserved. · Mortgage Pro App User Manual v1.1
   </footer>
-
-  <script>
-    const sourceToggle = document.getElementById("source-toggle");
-    const copySource = document.getElementById("copy-source");
-    const copyStatus = document.getElementById("copy-status");
-    const sourceView = document.getElementById("html-source");
-    const pageSource = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
-
-    sourceToggle.addEventListener("click", () => {
-      const willShow = sourceView.hidden;
-
-      if (willShow) {
-        sourceView.textContent = pageSource;
-      }
-
-      sourceView.hidden = !willShow;
-      sourceToggle.textContent = willShow ? "Hide HTML Code" : "View HTML Code";
-      sourceToggle.setAttribute("aria-expanded", String(willShow));
-
-      if (willShow) {
-        sourceView.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    });
-
-    copySource.addEventListener("click", async () => {
-      let copied = false;
-
-      try {
-        await navigator.clipboard.writeText(pageSource);
-        copied = true;
-      } catch (error) {
-        const textArea = document.createElement("textarea");
-        textArea.value = pageSource;
-        textArea.setAttribute("readonly", "");
-        textArea.style.position = "fixed";
-        textArea.style.left = "-9999px";
-        document.body.appendChild(textArea);
-        textArea.select();
-        copied = document.execCommand("copy");
-        textArea.remove();
-      }
-
-      copyStatus.textContent = copied ? "Copied!" : "Copy failed";
-      copySource.textContent = copied ? "HTML Copied" : "Copy HTML Code";
-
-      window.setTimeout(() => {
-        copyStatus.textContent = "";
-        copySource.textContent = "Copy HTML Code";
-      }, 2200);
-    });
-  </script>
 </body>
 </html>
