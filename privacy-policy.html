@@ -1,110 +1,749 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Mortgage Pro App Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            color: #1a3a52;
-            border-bottom: 3px solid #1a3a52;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #2c5aa0;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        ul {
-            margin-bottom: 15px;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        a {
-            color: #2c5aa0;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .last-updated {
-            font-style: italic;
-            color: #666;
-            margin-bottom: 30px;
-        }
-        .section {
-            background-color: white;
-            padding: 0;
-            margin-bottom: 20px;
-        }
-        hr {
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border: none;
-            border-top: 1px solid #ddd;
-        }
-        .footer {
-            font-size: 12px;
-            color: #999;
-            text-align: center;
-            margin-top: 40px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mortgage Pro App user manual and privacy policy.">
+  <title>Mortgage Pro App — User Manual &amp; Privacy Policy</title>
+  <style>
+    :root {
+      --sage: #97c15c;
+      --sage-light: #c8e29a;
+      --sage-dim: rgba(151, 193, 92, 0.12);
+      --dark: #1a1a1a;
+      --card: #242424;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #e8e8e8;
+      --muted: #999;
+      --formula-bg: #1e2a1a;
+      --danger: #e0a0a0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2d5a1b 0%, #3d7a25 60%, var(--sage) 100%);
+      padding: 48px 24px 36px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.95rem;
+      margin-top: 6px;
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+      color: rgba(255, 255, 255, 0.9);
+      display: inline-block;
+      font-size: 0.8rem;
+      margin-top: 14px;
+      padding: 4px 14px;
+    }
+
+    .page-nav {
+      background: rgba(26, 26, 26, 0.95);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .page-nav a {
+      border: 1px solid rgba(151, 193, 92, 0.35);
+      border-radius: 999px;
+      color: var(--sage-light);
+      font-size: 0.86rem;
+      font-weight: 700;
+      padding: 7px 14px;
+      text-decoration: none;
+    }
+
+    .page-nav a:hover,
+    .page-nav a:focus,
+    .page-nav button:hover,
+    .page-nav button:focus {
+      background: var(--sage);
+      color: #17200f;
+      outline: none;
+    }
+
+    .page-nav button {
+      background: transparent;
+      border: 1px solid rgba(151, 193, 92, 0.35);
+      border-radius: 999px;
+      color: var(--sage-light);
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.86rem;
+      font-weight: 700;
+      padding: 7px 14px;
+    }
+
+    .copy-status {
+      align-self: center;
+      color: #fff;
+      font-size: 0.8rem;
+      min-width: 54px;
+    }
+
+    .container {
+      margin: 0 auto;
+      max-width: 780px;
+      padding: 32px 20px 64px;
+    }
+
+    .document-heading {
+      margin-bottom: 24px;
+      scroll-margin-top: 80px;
+    }
+
+    .document-heading h2 {
+      color: #fff;
+      font-size: 1.55rem;
+      margin-bottom: 4px;
+    }
+
+    .document-heading p {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    nav.toc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 36px;
+      padding: 20px 24px;
+    }
+
+    nav.toc h3 {
+      color: var(--sage);
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    nav.toc ol,
+    nav.toc ul {
+      padding-left: 18px;
+    }
+
+    nav.toc li {
+      margin: 4px 0;
+    }
+
+    nav.toc a,
+    .manual-section a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    nav.toc a:hover,
+    .manual-section a:hover {
+      color: var(--sage);
+      text-decoration: underline;
+    }
+
+    .manual-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 20px;
+      padding: 24px;
+      scroll-margin-top: 80px;
+    }
+
+    .manual-section h3 {
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      color: var(--sage);
+      display: flex;
+      font-size: 1.05rem;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+    }
+
+    .icon {
+      align-items: center;
+      background: var(--sage-dim);
+      border-radius: 8px;
+      display: inline-flex;
+      flex-shrink: 0;
+      font-size: 0.9rem;
+      height: 30px;
+      justify-content: center;
+      width: 30px;
+    }
+
+    .body-text {
+      color: var(--text);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .body-text:last-child {
+      margin-bottom: 0;
+    }
+
+    .formula {
+      background: var(--formula-bg);
+      border-left: 3px solid var(--sage);
+      border-radius: 0 8px 8px 0;
+      margin: 12px 0;
+      padding: 12px 16px;
+    }
+
+    .formula-label {
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .formula pre {
+      color: var(--sage);
+      font-family: "SF Mono", "Fira Code", "Courier New", monospace;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .kv-table,
+    .dti-table {
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin: 12px 0;
+      width: 100%;
+    }
+
+    .kv-table td,
+    .dti-table td,
+    .dti-table th {
+      border-bottom: 1px solid var(--border);
+      padding: 8px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .kv-table tr:last-child td,
+    .dti-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .kv-table td:first-child {
+      color: var(--sage-light);
+      font-weight: 600;
+      white-space: nowrap;
+      width: 130px;
+    }
+
+    .dti-table th {
+      background: rgba(151, 193, 92, 0.15);
+      color: var(--sage);
+      font-size: 0.78rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .dti-table td:first-child {
+      font-weight: 700;
+    }
+
+    .dti-good td:first-child { color: #6fcf97; }
+    .dti-ok td:first-child { color: #f2c94c; }
+    .dti-risk td:first-child { color: #f2994a; }
+    .dti-over td:first-child { color: #eb5757; }
+
+    .privacy-list {
+      margin: 0 0 14px 20px;
+    }
+
+    .privacy-list li {
+      margin-bottom: 8px;
+    }
+
+    .disclaimer-box {
+      background: rgba(235, 87, 87, 0.07);
+      border: 1px solid rgba(235, 87, 87, 0.25);
+      border-radius: 10px;
+      color: var(--danger);
+      font-size: 0.88rem;
+      line-height: 1.65;
+      padding: 14px 16px;
+    }
+
+    .document-divider {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 52px 0;
+    }
+
+    .source-view {
+      background: #101010;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: var(--sage-light);
+      font-family: "SF Mono", "Fira Code", "Courier New", monospace;
+      font-size: 0.78rem;
+      line-height: 1.55;
+      margin: 0 auto 48px;
+      max-height: 75vh;
+      max-width: 1100px;
+      overflow: auto;
+      padding: 20px;
+      white-space: pre;
+    }
+
+    .source-view[hidden] {
+      display: none;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.78rem;
+      padding: 24px;
+      text-align: center;
+    }
+
+    @media (max-width: 500px) {
+      header h1 { font-size: 1.5rem; }
+      .page-nav { flex-wrap: wrap; }
+      .kv-table td:first-child {
+        white-space: normal;
+        width: 100px;
+      }
+      .manual-section { padding: 20px; }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #111;
+      }
+      header {
+        background: #3d7a25;
+        print-color-adjust: exact;
+      }
+      .page-nav { display: none; }
+      .manual-section,
+      nav.toc {
+        background: #fff;
+        border-color: #ccc;
+        break-inside: avoid;
+        color: #111;
+      }
+      .body-text,
+      nav.toc a,
+      .manual-section a {
+        color: #111;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Mortgage Pro App Privacy Policy Calculator</h1>
-    <p class="last-updated"><strong>Effective Date:</strong> June 19, 2026</p>
+  <header>
+    <h1>Mortgage Pro App</h1>
+    <p>User Manual &amp; Privacy Policy</p>
+    <span class="badge">Version 1.1 · © 2026 XMR Enterprises Inc.</span>
+  </header>
 
-    <div class="section">
-        <h2>Privacy Policy</h2>
-        <p>This privacy policy applies to the Mortgage Pro App Calculator app for mobile devices, together with any related services operated by XMR Enterprises Inc. (collectively, the "Application"). XMR Enterprises Inc. is hereby referred to as the "Service Provider".</p>
+  <nav class="page-nav" aria-label="Page sections">
+    <a href="#user-manual">User Manual</a>
+    <a href="#privacy-policy">Privacy Policy</a>
+    <button id="source-toggle" type="button" aria-expanded="false" aria-controls="html-source">View HTML Code</button>
+    <button id="copy-source" type="button">Copy HTML Code</button>
+    <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
+  </nav>
+
+  <main class="container">
+    <div class="document-heading" id="user-manual">
+      <h2>Complete User Manual</h2>
+      <p>Mortgage Pro App Calculator</p>
     </div>
 
-    <div class="section">
-        <h2>Information Collection and Use</h2>
-        <p>The Application collects information when you download and use it. This information may include information such as:</p>
-        <ul>
-            <li>Your device's Internet Protocol address</li>
-            <li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li>
-            <li>The time spent on the Application</li>
-            <li>Your mobile operating system you use</li>
-        </ul>
+    <nav class="toc" aria-label="User manual contents">
+      <h3>Manual Contents</h3>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#summary-card">Summary Card</a></li>
+        <li><a href="#loan-calculations">Loan Calculations</a></li>
+        <li><a href="#payment-breakdown">Monthly Payment Breakdown</a></li>
+        <li><a href="#escrow-pmi">Escrow &amp; PMI</a></li>
+        <li><a href="#dti">DTI Analyzer</a></li>
+        <li><a href="#amortization">Amortization &amp; Extra Payments</a></li>
+        <li><a href="#pdf-export">PDF Export</a></li>
+        <li><a href="#disclaimer">Disclaimer</a></li>
+      </ol>
+    </nav>
+
+    <section class="manual-section" id="overview">
+      <h3><span class="icon">🏠</span> Overview</h3>
+      <p class="body-text">Mortgage Pro App calculates your estimated monthly mortgage payment in real time. All data is saved automatically between sessions. Tap the trash icon to reset all fields.</p>
+      <p class="body-text">Required fields are highlighted in orange — enter your Purchase Price, Down Payment %, Interest Rate %, and Gross Monthly Income to unlock all calculations.</p>
+    </section>
+
+    <section class="manual-section" id="summary-card">
+      <h3><span class="icon">💳</span> Summary Card</h3>
+      <p class="body-text">The card at the top of the screen shows your total estimated monthly payment, broken down into four components:</p>
+      <table class="kv-table">
+        <tbody>
+          <tr><td>P&amp;I</td><td>Principal &amp; Interest — the core loan repayment</td></tr>
+          <tr><td>Tax</td><td>Monthly property tax</td></tr>
+          <tr><td>PMI</td><td>Private Mortgage Insurance (shown only when down payment is under 20%)</td></tr>
+          <tr><td>HOA/Ins</td><td>Monthly HOA + homeowner's insurance combined</td></tr>
+        </tbody>
+      </table>
+      <div class="formula">
+        <div class="formula-label">Total Monthly Payment</div>
+        <pre>P&amp;I + Monthly Tax + Insurance + PMI + HOA</pre>
+      </div>
+    </section>
+
+    <section class="manual-section" id="loan-calculations">
+      <h3><span class="icon">ƒ</span> Loan Calculations</h3>
+      <p class="body-text">All mortgage math uses the standard fixed-rate amortization formulas.</p>
+      <div class="formula">
+        <div class="formula-label">Down Payment Amount</div>
+        <pre>Purchase Price × (Down Payment % ÷ 100)</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">Loan Amount (Principal)</div>
+        <pre>Purchase Price − Down Payment Amount
+= Purchase Price × (1 − Down Payment % ÷ 100)</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">Monthly Interest Rate</div>
+        <pre>r = Annual Rate % ÷ 100 ÷ 12</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">Number of Payments</div>
+        <pre>n = Loan Term (years) × 12</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">Monthly P&amp;I Payment</div>
+        <pre>P&amp;I = L × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)
+
+where  L = Loan Amount
+       r = Monthly Interest Rate
+       n = Number of Payments</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">Total Amount Paid (lifetime)</div>
+        <pre>P&amp;I × n</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">Total Interest Paid (lifetime)</div>
+        <pre>(P&amp;I × n) − Loan Amount</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">Loan-to-Value Ratio (LTV)</div>
+        <pre>LTV % = Loan Amount ÷ Purchase Price × 100
+
+PMI is required when LTV &gt; 80%
+(i.e. down payment &lt; 20%)</pre>
+      </div>
+    </section>
+
+    <section class="manual-section" id="payment-breakdown">
+      <h3><span class="icon">📄</span> Monthly Payment Breakdown</h3>
+      <div class="formula">
+        <div class="formula-label">Monthly Property Tax</div>
+        <pre>Purchase Price × (Property Tax Rate % ÷ 100) ÷ 12</pre>
+      </div>
+      <p class="body-text">Each payment splits into interest and principal portions:</p>
+      <div class="formula">
+        <div class="formula-label">Interest Portion (month m)</div>
+        <pre>Remaining Balance × r
+where r = Annual Rate % ÷ 100 ÷ 12</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">Principal Portion (month m)</div>
+        <pre>P&amp;I Payment − Interest Portion</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">New Remaining Balance</div>
+        <pre>Previous Balance − Principal Portion</pre>
+      </div>
+      <p class="body-text">Early in the loan, the interest portion is large and the principal portion is small. Over time this reverses — each payment chips away more principal and less interest.</p>
+    </section>
+
+    <section class="manual-section" id="escrow-pmi">
+      <h3><span class="icon">🔒</span> Escrow &amp; PMI</h3>
+      <table class="kv-table">
+        <tbody>
+          <tr><td>Property Tax %</td><td>Annual tax rate as a % of purchase price, divided by 12 for the monthly amount</td></tr>
+          <tr><td>Monthly PMI</td><td>Appears automatically when down payment is under 20%</td></tr>
+          <tr><td>Monthly Insurance</td><td>Homeowner's insurance monthly premium</td></tr>
+          <tr><td>Monthly HOA</td><td>Homeowners Association monthly fee</td></tr>
+        </tbody>
+      </table>
+      <p class="body-text">All escrow fields are optional. Leave blank to treat as $0.</p>
+    </section>
+
+    <section class="manual-section" id="dti">
+      <h3><span class="icon">📊</span> DTI Analyzer</h3>
+      <p class="body-text">Debt-to-Income ratio is one of the primary metrics lenders use to evaluate loan eligibility. Enter your income and monthly debts to see your DTI in real time.</p>
+      <div class="formula">
+        <div class="formula-label">Total Monthly Debts</div>
+        <pre>Car + Student Loan + Personal Loan + Credit Card Min + Other Debt</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">DTI Ratio (Back-End)</div>
+        <pre>DTI % = (Total Monthly Payment + Total Monthly Debts)
+         ÷ Gross Monthly Income × 100
+
+This is the DTI shown in the app</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">Front-End Ratio (Housing Only)</div>
+        <pre>= Total Monthly Payment ÷ Gross Monthly Income × 100
+
+Lenders typically want this below 28%</pre>
+      </div>
+      <p class="body-text">DTI thresholds:</p>
+      <table class="dti-table">
+        <thead><tr><th>DTI</th><th>Assessment</th></tr></thead>
+        <tbody>
+          <tr class="dti-good"><td>≤ 43%</td><td>Good — acceptable to most conventional lenders</td></tr>
+          <tr class="dti-ok"><td>44%</td><td>Borderline — some lenders may approve</td></tr>
+          <tr class="dti-risk"><td>45–49%</td><td>Elevated risk — harder to qualify</td></tr>
+          <tr class="dti-over"><td>50%+</td><td>Exceeds most lender limits</td></tr>
+        </tbody>
+      </table>
+      <p class="body-text">Use the Mo / Annual toggle next to the income field to switch between entering monthly or annual income. The app converts automatically.</p>
+    </section>
+
+    <section class="manual-section" id="amortization">
+      <h3><span class="icon">📈</span> Amortization &amp; Extra Payments</h3>
+      <p class="body-text">The amortization chart plots two curves over the life of the loan by year:</p>
+      <table class="kv-table">
+        <tbody>
+          <tr><td>Green line</td><td>Remaining principal balance</td></tr>
+          <tr><td>Orange line</td><td>Cumulative interest paid to date</td></tr>
+          <tr><td>Dashed lines</td><td>Standard (no extra payment) scenario, shown for comparison when an extra payment is active</td></tr>
+          <tr><td>Purple marker</td><td>Breakeven Year</td></tr>
+          <tr><td>Green marker</td><td>Early Payoff Year (with extra payment)</td></tr>
+        </tbody>
+      </table>
+      <div class="formula">
+        <div class="formula-label">Breakeven Year</div>
+        <pre>The point where:
+  Cumulative Interest Paid = Remaining Principal Balance
+
+Before this year, you've paid more in interest than you've
+built in equity. After this year, your equity exceeds
+total interest paid.</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">Extra Payment Impact</div>
+        <pre>New Balance = Old Balance − (Regular Principal + Extra)
+
+Each extra dollar paid toward principal reduces the balance
+on which future interest is calculated. This compounds —
+each reduction lowers all future interest charges.</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">Months Saved</div>
+        <pre>Standard Payoff Months − Accelerated Payoff Months</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">Interest Saved</div>
+        <pre>(Standard Total Interest) − (Accelerated Total Interest)
+= [(P&amp;I × n) − L] − [(Accel P&amp;I × m) − L]
+
+where  m = accelerated payoff month
+       n = standard term in months
+       L = Loan Amount</pre>
+      </div>
+      <div class="formula">
+        <div class="formula-label">Extra Payments Start Year</div>
+        <pre>extraStartMonth = (Start Year − 1) × 12 + 1
+
+Months 1 through extraStartMonth − 1: standard payment only
+From extraStartMonth onward: payment + extra principal
+
+Example: Start Year = 5 means the first 4 years follow
+the normal schedule; accelerated payoff begins in month 49.</pre>
+      </div>
+      <p class="body-text">Even a small extra payment each month — $50 or $100 — can eliminate years from your loan and save tens of thousands in interest. The chart updates in real time.</p>
+    </section>
+
+    <section class="manual-section" id="pdf-export">
+      <h3><span class="icon">↑</span> PDF Export</h3>
+      <p class="body-text">Tap the share icon (↑) in the top-right corner of the main screen to generate a 2-page mortgage summary PDF.</p>
+      <table class="kv-table">
+        <tbody>
+          <tr><td>Page 1</td><td>Loan details, monthly payment breakdown, DTI analysis, amortization chart</td></tr>
+          <tr><td>Page 2</td><td>Full year-by-year amortization schedule — principal paid, interest paid, and remaining balance for each year</td></tr>
+        </tbody>
+      </table>
+      <p class="body-text">To export this User Manual as a PDF, tap the share icon (↑) in the top-left corner of the User Manual screen. From the share sheet you can save, print, AirDrop, or export to any app.</p>
+      <p class="body-text">Note: An ad may be displayed before the PDF preview on some exports.</p>
+    </section>
+
+    <section class="manual-section" id="disclaimer">
+      <h3><span class="icon">⚠️</span> Disclaimer</h3>
+      <div class="disclaimer-box">
+        All results are estimates for informational purposes only. They do not constitute financial advice, a loan commitment, or a guarantee of loan approval. Actual loan terms and eligibility are determined solely by your lender.<br><br>
+        Consult a licensed mortgage or financial professional before making any financial decisions. The developer assumes no liability for decisions made based on these calculations.
+      </div>
+    </section>
+
+    <hr class="document-divider">
+
+    <div class="document-heading" id="privacy-policy">
+      <h2>Mortgage Pro App Calculator Privacy Policy</h2>
+      <p><strong>Effective Date:</strong> June 19, 2026</p>
     </div>
 
-    <div class="section">
-        <h2>Cookies and Tracking Technologies</h2>
-        <p>The Application or its third-party SDKs may use cookies, SDKs, pixels, and similar technologies to support functionality, analytics, or service delivery. Where required by applicable law, the Service Provider will obtain consent before using non-essential tracking technologies.</p>
-    </div>
+    <nav class="toc" aria-label="Privacy policy contents">
+      <h3>Privacy Contents</h3>
+      <ul>
+        <li><a href="#privacy-introduction">Privacy Policy</a></li>
+        <li><a href="#information-collection">Information Collection and Use</a></li>
+        <li><a href="#cookies">Cookies and Tracking Technologies</a></li>
+        <li><a href="#your-rights">Your Rights</a></li>
+        <li><a href="#california-rights">California Privacy Rights</a></li>
+        <li><a href="#third-party-access">Third Party Access</a></li>
+        <li><a href="#international-transfers">International Data Transfers</a></li>
+      </ul>
+    </nav>
 
-    <div class="section">
-        <h2>Your Rights</h2>
-        <p>You may request access to, correction of, or deletion of your personal data held by the Service Provider. To exercise these rights, or to withdraw consent where processing is based on consent, contact the Service Provider at <strong>lendingpulseapp@gmail.com</strong>.</p>
-    </div>
+    <section class="manual-section" id="privacy-introduction">
+      <h3><span class="icon">🔐</span> Privacy Policy</h3>
+      <p class="body-text">This privacy policy applies to the Mortgage Pro App Calculator app for mobile devices, together with any related services operated by XMR Enterprises Inc. (collectively, the “Application”). XMR Enterprises Inc. is hereby referred to as the “Service Provider.”</p>
+    </section>
 
-    <div class="section">
-        <h2>Your California Privacy Rights (CCPA/CPRA)</h2>
-        <p>If you are a California resident, you have the right to know what personal information is collected, the right to delete personal information, the right to opt out of the sale or sharing of personal information, and the right to non-discrimination for exercising these rights. To exercise your CCPA/CPRA rights, contact the Service Provider at <strong>lendingpulseapp@gmail.com</strong>.</p>
-    </div>
+    <section class="manual-section" id="information-collection">
+      <h3><span class="icon">ℹ️</span> Information Collection and Use</h3>
+      <p class="body-text">The Application collects information when you download and use it. This information may include information such as:</p>
+      <ul class="privacy-list">
+        <li>Your device's Internet Protocol address</li>
+        <li>The pages of the Application that you visit, the time and date of your visit, and the time spent on those pages</li>
+        <li>The time spent on the Application</li>
+        <li>The mobile operating system you use</li>
+      </ul>
+    </section>
 
-    <div class="section">
-        <h2>Third Party Access</h2>
-        <p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
-    </div>
+    <section class="manual-section" id="cookies">
+      <h3><span class="icon">◉</span> Cookies and Tracking Technologies</h3>
+      <p class="body-text">The Application or its third-party SDKs may use cookies, SDKs, pixels, and similar technologies to support functionality, analytics, or service delivery. Where required by applicable law, the Service Provider will obtain consent before using non-essential tracking technologies.</p>
+    </section>
 
-    <div class="section">
-        <h2>International Data Transfers</h2>
-        <p>The Service Provider or its third-party service providers may transfer personal data to countries outside your country of residence, including outside the European Economic
+    <section class="manual-section" id="your-rights">
+      <h3><span class="icon">✓</span> Your Rights</h3>
+      <p class="body-text">You may request access to, correction of, or deletion of your personal data held by the Service Provider. To exercise these rights, or to withdraw consent where processing is based on consent, contact the Service Provider at <a href="mailto:lendingpulseapp@gmail.com"><strong>lendingpulseapp@gmail.com</strong></a>.</p>
+    </section>
+
+    <section class="manual-section" id="california-rights">
+      <h3><span class="icon">CA</span> Your California Privacy Rights (CCPA/CPRA)</h3>
+      <p class="body-text">If you are a California resident, you have the right to know what personal information is collected, the right to delete personal information, the right to opt out of the sale or sharing of personal information, and the right to non-discrimination for exercising these rights. To exercise your CCPA/CPRA rights, contact the Service Provider at <a href="mailto:lendingpulseapp@gmail.com"><strong>lendingpulseapp@gmail.com</strong></a>.</p>
+    </section>
+
+    <section class="manual-section" id="third-party-access">
+      <h3><span class="icon">↗</span> Third Party Access</h3>
+      <p class="body-text">Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and its service. The Service Provider may share your information with third parties in the ways described in this privacy statement.</p>
+    </section>
+
+    <section class="manual-section" id="international-transfers">
+      <h3><span class="icon">🌐</span> International Data Transfers</h3>
+      <p class="body-text">The Service Provider or its third-party service providers may transfer personal data to countries outside your country of residence, including outside the European Economic Area, where data-protection laws may differ from those in your country.</p>
+    </section>
+  </main>
+
+  <pre class="source-view" id="html-source" hidden></pre>
+
+  <footer>
+    © 2026 XMR Enterprises Inc. All rights reserved. · Mortgage Pro App User Manual v1.1
+  </footer>
+
+  <script>
+    const sourceToggle = document.getElementById("source-toggle");
+    const copySource = document.getElementById("copy-source");
+    const copyStatus = document.getElementById("copy-status");
+    const sourceView = document.getElementById("html-source");
+    const pageSource = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+
+    sourceToggle.addEventListener("click", () => {
+      const willShow = sourceView.hidden;
+
+      if (willShow) {
+        sourceView.textContent = pageSource;
+      }
+
+      sourceView.hidden = !willShow;
+      sourceToggle.textContent = willShow ? "Hide HTML Code" : "View HTML Code";
+      sourceToggle.setAttribute("aria-expanded", String(willShow));
+
+      if (willShow) {
+        sourceView.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+
+    copySource.addEventListener("click", async () => {
+      let copied = false;
+
+      try {
+        await navigator.clipboard.writeText(pageSource);
+        copied = true;
+      } catch (error) {
+        const textArea = document.createElement("textarea");
+        textArea.value = pageSource;
+        textArea.setAttribute("readonly", "");
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.select();
+        copied = document.execCommand("copy");
+        textArea.remove();
+      }
+
+      copyStatus.textContent = copied ? "Copied!" : "Copy failed";
+      copySource.textContent = copied ? "HTML Copied" : "Copy HTML Code";
+
+      window.setTimeout(() => {
+        copyStatus.textContent = "";
+        copySource.textContent = "Copy HTML Code";
+      }, 2200);
+    });
+  </script>
+</body>
+</html>
